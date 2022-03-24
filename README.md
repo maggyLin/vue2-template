@@ -1,5 +1,3 @@
-# cable-loss-vue
-
 ## Project setup
 ```
 yarn install
