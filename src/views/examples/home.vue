@@ -8,6 +8,15 @@
     <div>
       <router-link to="axios-ex">go to axios example</router-link>
     </div>
+    <div>
+      <router-link to="excel-ex">go to excel example</router-link>
+    </div>
+    <div>
+      <router-link to="excelByTable">go to excelByTable example</router-link>
+    </div>
+    <div>
+      <router-link to="excelByImport">go to excelByImport example</router-link>
+    </div>
   </div>
 </template>
 

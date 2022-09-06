@@ -15,46 +15,75 @@
 </template>
 
 <script>
+import { apiUserGetToken, apiUserLoging } from '../../api/user-service'
+
 export default {
   name: 'axiosex',
   data() {
-    return {}
+    return {
+      test: 1,
+    }
   },
   created() {},
   methods: {
     getExample() {
-      this.axios({
-        method: 'get',
-        url: '',
-        headers: {'Content-Type': 'application/json; charset=utf-8'}
+      //不封裝
+      // this.axios({
+      //   method: 'get',
+      //   url: '',
+      //   headers: {'Content-Type': 'application/json; charset=utf-8'}
+      // })
+      //   .then(function (response) {
+      //     // handle success
+      //     console.log(response)
+      //   })
+      //   .catch(function (error) {
+      //     // handle error
+      //     console.log(error)
+      //   })
+
+      //封裝
+      apiUserGetToken().then(function (response) {
+        console.log(response)
       })
-        .then(function (response) {
-          // handle success
-          console.log(response)
-        })
-        .catch(function (error) {
-          // handle error
-          console.log(error)
-        })
     },
     postExample() {
-      this.axios({
-        method: 'post',
-        url: '',
-        data: {
-          userId: 'admin',
-          password: '123456',
-        },
-        headers: {'Content-Type': 'application/json; charset=utf-8'}
+      //不封裝
+      // this.axios({
+      //   method: 'post',
+      //   url: '',
+      //   data: {
+      //     userId: '',
+      //     password: '',
+      //   },
+      //   headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      // })
+      //   .then(function (response) {
+      //     // handle success
+      //     console.log(response)
+      //   })
+      //   .catch(function (error) {
+      //     // handle error
+      //     console.log(error)
+      //   })
+
+      //封裝
+      apiUserLoging({ userId: 'admin', password: '123456' }).then(function (
+        response
+      ) {
+        console.log(response)
       })
-        .then(function (response) {
-          // handle success
-          console.log(response)
-        })
-        .catch(function (error) {
-          // handle error
+
+      //可以直接使用this,不用轉換self
+      apiUserLoging({ userId: 'admin', password: '123456' }).then(
+        (data) => {
+          console.log(data)
+          console.log(this.test)
+        },
+        (error) => {
           console.log(error)
-        })
+        }
+      )
     },
   },
 }

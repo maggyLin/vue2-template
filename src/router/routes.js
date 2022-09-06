@@ -15,4 +15,19 @@ export default [
     name: 'axiosEx',
     component: () => import('../views/examples/axios-ex'),
   },
+  {
+    path: '/excel-ex',
+    name: 'excelEx',
+    component: () => import('../views/examples/excel-ex'),
+  },
+  {
+    path: '/excelByTable',
+    name: 'excelByTable',
+    component: () => import('../views/examples/excelByTable'),
+  },
+  {
+    path: '/excelByImport',
+    name: 'excelByImport',
+    component: () => import('../views/examples/excelByImport'),
+  },
 ]

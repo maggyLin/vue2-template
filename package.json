@@ -12,10 +12,13 @@
     "bootstrap": "4.5.3",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "file-saver": "^2.0.5",
     "vue": "^2.6.11",
     "vue-axios": "^3.4.1",
     "vue-meta": "^2.4.0",
-    "vue-router": "3"
+    "vue-router": "3",
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.15",
@@ -32,8 +35,7 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+      "plugin:vue/essential"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
